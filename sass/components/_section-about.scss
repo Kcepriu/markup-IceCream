@@ -1,0 +1,7 @@
+.about {
+  @include section();
+}
+
+.about__container {
+  @include container();
+}

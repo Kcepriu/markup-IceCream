@@ -1,0 +1,7 @@
+.products {
+  @include section();
+}
+
+.products__container {
+  @include container();
+}

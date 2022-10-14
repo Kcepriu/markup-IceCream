@@ -1,0 +1,7 @@
+.hero {
+  @include section();
+}
+
+.hero__container {
+  @include container();
+}

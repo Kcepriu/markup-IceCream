@@ -1,0 +1,7 @@
+.contacts {
+  @include section();
+}
+
+.contacts__container {
+  @include container();
+}

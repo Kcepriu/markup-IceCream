@@ -1,0 +1,7 @@
+.footer {
+  @include section();
+}
+
+.footer__container {
+  @include container();
+}

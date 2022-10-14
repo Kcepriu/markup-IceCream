@@ -1,0 +1,7 @@
+.reviews {
+  @include section();
+}
+
+.reviews__container {
+  @include container();
+}
