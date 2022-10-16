@@ -1,4 +1,146 @@
-@mixin btn-general() {
+@mixin btn-common() {
   cursor: pointer;
   border: none;
+}
+
+// Define colors text, backgound border button
+@mixin btn-color($type-btn, $type-filling) {
+  $color-filling: var(--color-accent);
+  $color-text: var(--black-primary);
+
+  @if $type-btn =='default' {
+    $color-filling: var(--color-accent);
+    $color-text: var(--black-primary);
+  }
+
+  @else if $type-btn =='hover' {
+    $color-filling: var(--green-btn);
+    $color-text: var(--black-primary);
+  }
+
+  @else if $type-btn =='focus' {
+    $color-filling: var(--green-btn);
+    color: var(--text-color-second);
+  }
+
+  @else if $type-btn =='disabled' {
+    $color-filling: var(--text-color-spicial);
+    $color-text: var(--black-primary);
+  }
+
+  @if $type-filling =='bg' {
+    background-color: $color-filling;
+    border: 2px solid $color-filling;
+    color: $color-text;
+  }
+
+  @else if $type-filling =='border' {
+    background-color: transparent;
+    border: 2px solid $color-filling;
+    color: $color-text;
+  }
+
+  @else if $type-filling =='text' {
+    background-color: transparent;
+    border: none;
+    color: $color-filling;
+  }
+}
+
+@mixin btn-size-elem($type) {
+  font-weight: 600;
+
+  @if $type =='mobile' {
+    height: 24px;
+    padding: 0;
+
+    font-size: 8px;
+    line-height: 1.25;
+
+    border-radius: 8px;
+  }
+
+  @else {
+    height: 42px;
+    padding: 12px 34px;
+
+    font-size: 14px;
+    line-height: 1.29;
+
+    border-radius: 10px;
+  }
+}
+
+// Define size elements button with type button
+@mixin btn-sixe($type-size: 'desk-tab-mobile') {
+
+  @if $type-size =='desk-tab-mobile' {
+    @include btn-size-elem('desk');
+  }
+
+  @else {
+    @include btn-size-elem('mobile');
+
+    @include mq('desk') {
+      @include btn-size-elem('desk');
+    }
+  }
+}
+
+// General button, Parrent for all buttons
+@mixin btn-general($type-size: 'desk-tab-mobile', $type-filling: 'bg') {
+  @include btn-common();
+
+  @include btn-sixe($type-size);
+
+  @include btn-color('default', $type-filling);
+
+  &.btn__text-after::after {
+    content: '>';
+    margin-left: 5px;
+  }
+
+  &:hover {
+    @include btn-color('hover', $type-filling);
+  }
+
+  &:focus {
+    @include btn-color('focus', $type-filling);
+  }
+
+  &:disabled {
+    @include btn-color('disabled', $type-filling);
+  }
+
+}
+
+
+/**
+  |============================
+  | Mixin btn
+  |============================
+*/
+@mixin btn-product() {
+  @include btn-general('tab-mobile', 'border');
+}
+
+@mixin btn-read() {
+  @include btn-general('desk-tab-mobile', 'bg');
+}
+
+@mixin btn-how() {
+  @include btn-general('tab-mobile', 'text');
+}
+
+@mixin btn-location() {
+  @include btn-general('desk-tab-mobile', 'bg');
+}
+
+@mixin btn-francise() {
+  @include btn-general('desk-tab-mobile', 'border');
+}
+
+@mixin btn-by() {
+  @include btn-general('desk-tab-mobile', 'bg');
+
 }

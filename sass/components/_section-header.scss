@@ -2,18 +2,46 @@
   @include section();
   @include container();
   background-color: var(--background-green);
+
+  padding-top: 12px;
+  padding-bottom: 0;
+
+  @include mq(tab) {
+    padding-top: 20px;
+  }
+
+  @include mq(desk) {
+    padding-top: 8px;
+  }
+
 }
 
 .header__container {
   display: flex;
+  align-items: center;
 }
 
 .logo__img {
+  // TODO ПЕреробити зображення
   @include img();
+  width: 41px;
+
+  @include mq(tab) {
+    width: 48px;
+  }
+
+  @include mq(desk) {
+    width: 60px;
+  }
 }
 
 .header__nav {
-  // margin: 100px;
+  display: none;
+
+  @include mq(desk) {
+    display: block;
+    margin-left: 270px;
+  }
 }
 
 .nav__list {
@@ -28,20 +56,32 @@
   line-height: 1.25;
 
   color: var(--text-color-second);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+    // TODO переробити курсор
+    // @include cursor(our);
+  }
 }
 
 .header__wrap-btn {
   margin-left: auto;
+  align-items: center;
   display: flex;
   gap: 32px;
 }
 
 .header__btn-mobile-menu {
-  @include btn-general();
+  @include btn-common();
 
   background-color: inherit;
   width: 32px;
   height: 32px;
+
+  @include mq(desk) {
+    display: none;
+  }
 }
 
 .header__icon-open-menu {
@@ -50,5 +90,11 @@
 }
 
 .header__btn {
-  height: 40px;
+  display: none;
+  @include btn-by();
+
+
+  @include mq(tab) {
+    display: block;
+  }
 }
