@@ -91,30 +91,96 @@
         <div class="products__container">
           <p class="products__layble">100% natural</p>
           <h2 class="products__title">Products</h2>
+
           <ul class="products__list">
-            <li class="products__item">
+            <li class="products__item products__item--green">
               <h3 class="products__name">ice cream</h3>
               <p class="products__description">
                 Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural
                 stabilizer
               </p>
-              <button class="products__btn" type="button">--+</button>
+              <button class="products__btn" type="button" aria-label="order a product">
+                <svg class="products__icon-btn" width="52" height="24">
+                  <use
+                    class="products__icon-btn--default"
+                    href="./images/icons.svg#icon-arrow-default"
+                    width="41"
+                    height="24"
+                  ></use>
+                  <use
+                    class="products__icon-btn--hover"
+                    href="./images/icons.svg#icon-arrow-hover"
+                    width="51"
+                    height="24"
+                  ></use>
+                  <use
+                    class="products__icon-btn--focus"
+                    href="./images/icons.svg#icon-arrow-focus"
+                    width="52"
+                    height="24"
+                  ></use>
+                </svg>
+              </button>
             </li>
-            <li class="products__item">
+
+            <li class="products__item products__item--yellow">
               <h3 class="products__name">ice coffee</h3>
               <p class="products__description">
                 Fragrant invigorating drink created from 100% natural ingredients without the use of
                 preservatives and flavor enhancers
               </p>
-              <button class="products__btn" type="button">--+</button>
+              <button class="products__btn" type="button" aria-label="order a product">
+                <svg class="products__icon-btn" width="52" height="24">
+                  <use
+                    class="products__icon-btn--default"
+                    href="./images/icons.svg#icon-arrow-default"
+                    width="41"
+                    height="24  "
+                  ></use>
+                  <use
+                    class="products__icon-btn--hover"
+                    href="./images/icons.svg#icon-arrow-hover"
+                    width="51"
+                    height="24"
+                  ></use>
+                  <use
+                    class="products__icon-btn--focus"
+                    href="./images/icons.svg#icon-arrow-focus"
+                    width="52"
+                    height="24"
+                  ></use>
+                </svg>
+              </button>
             </li>
-            <li class="products__item">
+
+            <li class="products__item products__item--cocktail">
               <h3 class="products__name">milkshakes</h3>
               <p class="products__description">
                 Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries
                 and other sweets of your choice
               </p>
-              <button class="products__btn" type="button">--+</button>
+              <button class="products__btn" type="button" aria-label="order a product">
+                <svg class="products__icon-btn" width="52" height="24">
+                  <use
+                    class="products__icon-btn--default"
+                    href="./images/icons.svg#icon-arrow-default"
+                    width="41"
+                    height="24  "
+                  ></use>
+                  <use
+                    class="products__icon-btn--hover"
+                    href="./images/icons.svg#icon-arrow-hover"
+                    width="51"
+                    height="24"
+                  ></use>
+                  <use
+                    class="products__icon-btn--focus"
+                    href="./images/icons.svg#icon-arrow-focus"
+                    width="52"
+                    height="24"
+                  ></use>
+                </svg>
+              </button>
             </li>
           </ul>
         </div>
@@ -125,7 +191,7 @@
         <div class="about__container">
           <p class="about__layble">Tradition and love”</p>
           <h2 class="about__title">How it’s made?</h2>
-          <img class="about__img" src="./images/about/cow.png" alt="a cow eats grass" width="335" />
+          <!-- <img class="about__img" src="./images/about/cow.png" alt="a cow eats grass" width="335" /> -->
           <div class="about__texts">
             <p class="about__text">
               Ice is a place where you will become not only a little happier, but also healthier.
@@ -138,7 +204,7 @@
             </p>
             <p class="about__text">This is enough to choose ice cream and coffee for any mood!</p>
           </div>
-          <button class="about__btn" type="button">Read more</button>
+          <button class="about__btn btn__text-after" type="button">Read more</button>
         </div>
       </section>
     </main>

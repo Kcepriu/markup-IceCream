@@ -1,0 +1,39 @@
+.products__btn {
+  width: 80px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    @include cursor();
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .products__icon-btn--default,
+  &:focus .products__icon-btn--default {
+    display: none;
+  }
+
+  &:hover .products__icon-btn--hover {
+    display: block;
+  }
+
+  &:focus .products__icon-btn--focus {
+    display: block;
+  }
+
+  &:hover .products__icon-btn--focus {
+    display: none;
+  }
+}
+
+.products__icon-btn--hover {
+  display: none;
+}
+
+.products__icon-btn--focus {
+  display: none;
+}

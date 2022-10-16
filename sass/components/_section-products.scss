@@ -1,3 +1,70 @@
 .products__container {
   @include container();
 }
+
+.products__layble {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.22;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.products__title {
+  @include title-section();
+  text-align: center;
+  margin-top: 12px;
+}
+
+.products__list {
+  @include list();
+  margin-top: 148px;
+  display: flex;
+  flex-direction: column;
+  gap: 164px;
+}
+
+.products__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  flex-basis: 420px;
+
+  border-radius: 24px;
+  padding: 123px 40px 5px 40px;
+
+  &.products__item--green {
+    background-color: var(--background-card-green);
+  }
+
+  &.products__item--yellow {
+    background-color: var(--background-card-yellow);
+  }
+
+  &.products__item--cocktail {
+    background-color: var(--background-card-cocktail);
+  }
+}
+
+.products__name {
+  margin-bottom: 40px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.products__description {
+  font-size: 14px;
+  line-height: 1.76;
+
+  flex-grow: 1;
+}
+
+@import './section-products-btn';
+@import './section-products-img-card';

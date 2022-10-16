@@ -1,3 +1,5 @@
 .gallery__container {
   @include container();
+  display: none;
+  ;
 }

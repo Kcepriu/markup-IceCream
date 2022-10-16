@@ -52,6 +52,7 @@
     cursor: pointer;
   }
 
+
   @if $type =='our' {
     // cursor: url('../../images/cursor.svg') 24 0, auto;
     cursor: url('../../images/cursor.svg'), auto;
