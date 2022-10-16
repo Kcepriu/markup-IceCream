@@ -1,0 +1,24 @@
+@mixin container() {
+  padding: $padding-section-v $padding-section-h-mobile;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 100%;
+
+  @include mq(mob) {
+    max-width: $mobile;
+  }
+
+  @include mq(tab) {
+    max-width: $tablet;
+    padding: $padding-section-v $padding-section-h-tablet;
+
+  }
+
+  @include mq(desk) {
+    max-width: $desktop;
+
+    padding: $padding-section-v $padding-section-h-desk;
+  }
+}

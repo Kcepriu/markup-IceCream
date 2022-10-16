@@ -1,7 +1,61 @@
-.hero {
-  @include section();
+.hero__container {
+  position: relative;
+
+  @include container();
+  background-color: var(--background-green);
+  padding: 110px 53px 0 20px;
 }
 
-.hero__container {
-  @include container();
+.hero__title {
+  @include title-section();
+
+  font-size: 26px;
+  line-height: 1.27;
+  letter-spacing: 0.04em;
+
+  color: var(--text-color-second);
+}
+
+.hero__title--upper {
+  font-size: 34px;
+  line-height: 0.97;
+}
+
+.hero__img-plate {
+  display: none;
+}
+
+.hero__list-btn {
+  @include list();
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.hero__btn-product {
+  @include link();
+  @include btn-product();
+}
+
+.hero__btn-how {
+  @include btn-how();
+}
+
+.hero__text {
+  display: none;
+}
+
+.hero__list-description {
+  display: none;
+}
+
+.hero__img-ice {
+  // toto зображення спозиціонувати
+
+  // position: absolute;
+  // bottom: 0;
+  // left: 82px;
+
+  max-width: 70%;
+
 }

@@ -1,30 +1,3 @@
-@mixin container() {
-  padding-left: $padding-container-mobile;
-  padding-right: $padding-container-mobile;
-
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 100%;
-
-  @include mq(mob) {
-    max-width: $mobile;
-  }
-
-  @include mq(tab) {
-    max-width: $tablet;
-    padding-left: $padding-container-tablet;
-    padding-right: $padding-container-tablet;
-  }
-
-  @include mq(desk) {
-    max-width: $desktop;
-
-    padding-left: $padding-container-desk;
-    padding-right: $padding-container-desk;
-  }
-}
-
 @mixin img() {
   display: block;
   max-width: 100%;
@@ -54,32 +27,25 @@
   margin: -1px;
 }
 
-@mixin section() {
-  padding-top: $padding-section;
-  padding-bottom: $padding-section;
 
-  // @include mq(desk) {
-  //   padding-top: $padding-section-desktop;
-  //   padding-bottom: $padding-section-desktop;
-  // }
+
+@mixin title-section() {
+  font-family: 'Seymour One', sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1.27;
+
+  @include mq(tab) {
+    font-size: 34px;
+    line-height: 1.26;
+  }
+
+  @include mq(desk) {
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+  }
 }
-
-// %title-section {
-//   margin-bottom: 30px;
-
-//   color: getColor('text-title');
-//   font-weight: 700;
-//   font-size: 28px;
-//   line-height: 1.18;
-//   text-align: center;
-
-//   @include mq(desk) {
-//     margin-bottom: 50px;
-
-//     font-size: 36px;
-//     line-height: 1.17;
-//   }
-// }
 
 @mixin cursor($type: 'hover') {
   @if $type =='hover' {
