@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=c:wght@400;500;600;700;800;900&family=Roboto:wght@700&family=Seymour+One&display=swap"
       rel="stylesheet"
     />
 
@@ -189,7 +189,7 @@
       <!-- Section About -->
       <section class="about">
         <div class="about__container">
-          <p class="about__layble">Tradition and love”</p>
+          <p class="about__layble">Tradition and love</p>
           <h2 class="about__title">How it’s made?</h2>
           <!-- <img class="about__img" src="./images/about/cow.png" alt="a cow eats grass" width="335" /> -->
           <div class="about__texts">
@@ -215,24 +215,33 @@
         <h2 class="advantages__title">Advantages</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
-            <h3 class="advantages__name">721</h3>
-            <span class="advantages__text"
-              >Aliquam ac dui vel dui vulputaпte consectetur. Mauris massa.</span
-            >
+            <div class="advantages__wrap advantages__wrap-cow">
+              <h3 class="advantages__name">Cow</h3>
+              <p class="advantages__count">721</p>
+              <p class="advantages__text">
+                Aliquam ac dui vel dui vulputaпte consectetur. Mauris massa.
+              </p>
+            </div>
           </li>
 
           <li class="advantages__item">
-            <h3 class="advantages__name">16kg</h3>
-            <span class="advantages__text"
-              >Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</span
-            >
+            <div class="advantages__wrap advantages__wrap-weight">
+              <h3 class="advantages__name">Weight</h3>
+              <p class="advantages__count">16kg</p>
+              <p class="advantages__text">
+                Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+              </p>
+            </div>
           </li>
 
           <li class="advantages__item">
-            <h3 class="advantages__name">84</h3>
-            <span class="advantages__text"
-              >Aliquam ac dui vel dui vulputaпte consectetur. Mauris massa.</span
-            >
+            <div class="advantages__wrap advantages__wrap-ice">
+              <h3 class="advantages__name">Ice crema</h3>
+              <p class="advantages__count">84</p>
+              <p class="advantages__text">
+                Aliquam ac dui vel dui vulputaпte consectetur. Mauris massa.
+              </p>
+            </div>
           </li>
         </ul>
       </div>
@@ -277,14 +286,15 @@
                 >10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA</a
               >
             </div>
+
             <ul class="contacts__working-hours">
               <li class="contacts__days">
                 <p class="contacts__weekdays">Monday - Friday</p>
-                <p class="contacts__working-hours">06:00 AM - 10:00 PM</p>
+                <p class="contacts__hours">06:00 AM - 10:00 PM</p>
               </li>
               <li class="contacts__days">
                 <p class="contacts__weekdays">Saturday - Sunday</p>
-                <p class="contacts__working-hours">08:00 AM - 16:00 PM</p>
+                <p class="contacts__hours">08:00 AM - 16:00 PM</p>
               </li>
             </ul>
 
@@ -317,11 +327,11 @@
             <ul class="contacts__working-hours">
               <li class="contacts__days">
                 <p class="contacts__weekdays">Monday - Friday</p>
-                <p class="contacts__working-hours">06:00 AM - 10:00 PM</p>
+                <p class="contacts__hours">06:00 AM - 10:00 PM</p>
               </li>
               <li class="contacts__days">
                 <p class="contacts__weekdays">Saturday - Sunday</p>
-                <p class="contacts__working-hours">08:00 AM - 16:00 PM</p>
+                <p class="contacts__hours">08:00 AM - 16:00 PM</p>
               </li>
             </ul>
 
@@ -350,11 +360,11 @@
             <ul class="contacts__working-hours">
               <li class="contacts__days">
                 <p class="contacts__weekdays">Monday - Friday</p>
-                <p class="contacts__working-hours">06:00 AM - 10:00 PM</p>
+                <p class="contacts__hours">06:00 AM - 10:00 PM</p>
               </li>
               <li class="contacts__days">
                 <p class="contacts__weekdays">Saturday - Sunday</p>
-                <p class="contacts__working-hours">08:00 AM - 16:00 PM</p>
+                <p class="contacts__hours">08:00 AM - 16:00 PM</p>
               </li>
             </ul>
 
@@ -374,10 +384,10 @@
         </ul>
         <ul class="contacts__list-btn">
           <li class="contacts__item__btn">
-            <button class="contacts__btn" type="button">Our Locations</button>
+            <button class="contacts__btn-our btn__text-after" type="button">Our Locations</button>
           </li>
           <li class="contacts__item__btn">
-            <button class="contacts__btn" type="button">Franchise</button>
+            <button class="contacts__btn-francise btn__text-after" type="button">Franchise</button>
           </li>
         </ul>
       </div>
@@ -390,13 +400,22 @@
         <p class="footer__title">with passion</p>
         <ul class="footer__socials">
           <li class="footer__item-socials">
-            <a class="footer__linc-socials" href="" aria-label="github">github</a>
+            <a class="footer__linc-socials" href="" aria-label="github">
+              <svg class="footer__icon" width="32" height="32">
+                <use href="./images/icons.svg#icon-github"></use></svg
+            ></a>
           </li>
           <li class="footer__item-socials">
-            <a class="footer__linc-socials" href="" aria-label="telegram">telegram</a>
+            <a class="footer__linc-socials" href="" aria-label="telegram">
+              <svg class="footer__icon" width="32" height="32">
+                <use href="./images/icons.svg#icon-telegram"></use></svg
+            ></a>
           </li>
           <li class="footer__item-socials">
-            <a class="footer__linc-socials" href="" aria-label="facebook">facebook</a>
+            <a class="footer__linc-socials" href="" aria-label="facebook">
+              <svg class="footer__icon" width="32" height="32">
+                <use href="./images/icons.svg#icon-facebook"></use></svg
+            ></a>
           </li>
         </ul>
 

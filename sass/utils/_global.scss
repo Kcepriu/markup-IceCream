@@ -1,7 +1,7 @@
 body {
   font-family: 'montserrat', sans-serif;
   letter-spacing: 0.04em;
-  color: getColor('text-primary');
+  color: var(--text-color-primary);
 }
 
 h1,
@@ -21,6 +21,6 @@ p {
   overflow-y: hidden;
 }
 
-* {
-  outline: 1px solid red;
-}
+// * {
+//   outline: 1px solid red;
+// }

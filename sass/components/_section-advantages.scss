@@ -1,3 +1,82 @@
 .advantages__container {
   @include container();
+  padding: 40px 45px 36px 45px;
+
+  background-color: var(--background-green);
+}
+
+.advantages__title {
+  @include visually-hidden();
+}
+
+.advantages__name {
+  @include visually-hidden();
+}
+
+.advantages__list {
+  @include list();
+}
+
+.advantages__item:not(:first-child) {
+  margin-top: 16px;
+}
+
+.advantages__count {
+  margin-bottom: 18px;
+
+  font-family: 'Roboto';
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  color: var(--text-color-second);
+}
+
+.advantages__text {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+
+  text-align: center;
+
+  color: var(--text-color-second);
+}
+
+/**
+  |============================
+  | Images
+  |============================
+*/
+@mixin advantages__wrap-pseudo-element($background-image) {
+  content: '';
+  margin: 0 auto 16px auto;
+
+  width: 50px;
+  height: 50px;
+
+  display: block;
+
+  border-radius: 50%;
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-accent);
+}
+
+.advantages__wrap-cow::before {
+  @include advantages__wrap-pseudo-element('../../images/advantages/cow.png');
+}
+
+.advantages__wrap-weight::before {
+  @include advantages__wrap-pseudo-element('../../images/advantages/weight.png');
+}
+
+.advantages__wrap-ice::before {
+  @include advantages__wrap-pseudo-element('../../images/advantages/ice-crema.png');
 }

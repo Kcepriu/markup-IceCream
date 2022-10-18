@@ -72,7 +72,7 @@
 }
 
 // Define size elements button with type button
-@mixin btn-sixe($type-size: 'desk-tab-mobile') {
+@mixin btn-size($type-size: 'desk-tab-mobile') {
 
   @if $type-size =='desk-tab-mobile' {
     @include btn-size-elem('desk');
@@ -91,7 +91,7 @@
 @mixin btn-general($type-size: 'desk-tab-mobile', $type-filling: 'bg') {
   @include btn-common();
 
-  @include btn-sixe($type-size);
+  @include btn-size($type-size);
 
   @include btn-color('default', $type-filling);
 
